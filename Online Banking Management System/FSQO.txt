@@ -1,0 +1,503 @@
+------------VB.NET---------------------------
+---------------------------------------------
+
+1) Write a program to move text "Pune University" continuously from left to right and vise versa.
+	get  button1
+	get timer1
+	get label1	
+	Button1_Click
+		Timer1.Enabled = True
+	End Sub
+
+        Timer1_Tick
+		Dim x as Integer
+	X = label.Location.x + 2
+	if label1.Location.x <580 then
+           	label1.Location(x,57,mention width of element,mention height of elemt)
+	Else
+	   label1.SetBounds(0,59,--,--)
+ 
+2) Write a prorgam in C# to create a function to check whether a number is prime or not.
+
+   using System;  
+  public class PrimeNumberExample  
+   {  
+     public static void Main(string[] args)  
+      {  
+          int n, i, m=0, flag=0;    
+          Console.Write("Enter the Number to check Prime: ");    
+          n = int.Parse(Console.ReadLine());  
+          m=n/2;    
+          for(i = 2; i <= m; i++)    
+          {    
+           if(n % i == 0)    
+            {    
+             Console.Write("Number is not Prime.");    
+             flag=1;    
+             break;    
+            }    
+          }    
+          if (flag==0)    
+           Console.Write("Number is Prime.");       
+     }  
+   }  
+
+
+3) Write a program in C# to create a function to swap the values of two integers.
+
+	using System;
+public class funcexer6
+{
+    public static void interchange(ref int num1, ref int num2)
+    {
+        int newnum;
+         
+        newnum = num1;
+        num1 = num2;
+        num2 = newnum;
+    }
+    public static void Main()
+    {
+      int n1,n2;
+	  Console.Write("\n\nFunction : To swap the values of two integer numbers :\n");
+      Console.Write("----------------------------------------------------------\n");
+	  Console.Write("Enter a number: ");
+      n1= Convert.ToInt32(Console.ReadLine());
+      Console.Write("Enter another number: ");
+      n2= Convert.ToInt32(Console.ReadLine());		
+      interchange( ref n1, ref n2 );
+      Console.WriteLine( "Now the 1st number is : {0} , and the 2nd number is : {1}", n1, n2 );
+    }
+}
+
+   
+4) Write VB.Net program to design the follwing form : it  contains the three menus color (red,blue and green), window
+(minimize, Maximize, and restore) and Exit. On Selection of any menu or submenu result shows affect the form control
+(for example if user selected red color from color menu back color of form should get changed to red and if user selected 
+maximize from window menu then form should get maximized).
+
+5)Write a VB.NET program to generate sample tree view control
+
+6)Write a C# program application to display the vowels  from a given string.
+
+-----------JAVA---------------------------
+------------------------------------------
+
+1)Create a JSP page to accept a number from a user and display it in words :
+Example : 123 _ one Two Three . The output should be in red color.
+
+2)Write a menu driver program in java for the following : Assume Emp table with attributes(Eno,EName,Salary,Desg)is already 
+Created.
+1.Insert
+2.Update 
+3.Delete
+4.Search
+5.Display
+6.Exit
+
+
+	import java.io.*;
+import java.sql.*;
+class Menu
+{
+    public static void main(String args[])
+    {
+        DataInputStream din=new DataInputStream(System.in);
+        int rno,k,ch,per;
+        String nm;
+        try        {
+            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+            Connection cn=DriverManager.getConnection("jdbc:odbc:BCA");
+            Statement st=cn.createStatement();
+            do            {
+                System.out.println(" 1. Insert \n 2. Update \n 3. Delete \n 4. Search \n 5. Display \n 6. Exit");
+                System.out.print("Enter your choice: ");
+                ch=Integer.parseInt(din.readLine());
+                System.out.println("............................................");
+                switch(ch)
+                {
+                    case 1:
+                        System.out.print("How many records you want to inserted ? ");
+                        Int n=Integer.parseInt(din.readLine());
+                        for(int i=0;i<n;i++)
+                        {
+                            System.out.println("Enter Roll No : ");
+                            rno=Integer.parseInt(din.readLine());
+                            System.out.println("Enter Name : ");
+                            nm=din.readLine();
+                            System.out.println("Enter Percentage: ");
+                            per=Integer.parseInt(din.readLine());
+                            18                            k=st.executeUpdate("insert into Stud values(" + rno + ",'"+ nm + "'," + per +")");
+                            if(k>0)
+                            {
+                                System.out.println("Record Inserted Successfully..!!");
+                                System.out.println("..............................................");
+                            }
+                        }
+                        break;
+                    case 2:
+                        System.out.print("Enter the Roll no: ");
+                        rno=Integer.parseInt(din.readLine());
+                        System.out.print("Enter the Sname: ");
+                        nm=din.readLine();
+                        k=st.executeUpdate("update Stud set sname='" + nm + "' where rno="+rno);
+                        if(k>0)
+                        {
+                            System.out.println("Record Is Updated..!!");
+                        }
+                        System.out.println("...............................................");
+                        break;
+                    case 3:
+                        System.out.print("Enter the Roll no: ");
+                        rno=Integer.parseInt(din.readLine());
+                        k=st.executeUpdate("delete from Stud where rno=" +rno);
+                        if(k>0)
+                        {
+                            System.out.println("Record Is Deleted..!!");
+                        }
+                        System.out.println(".............................................");
+                        break;
+                    case 4:
+                        System.out.print("Enter the Roll no Whoes search record: ");
+                        rno=Integer.parseInt(din.readLine());
+                        System.out.println(".............................................");
+                        ResultSet rs1=st.executeQuery("select * from Stud where rno=" +rno);
+                        while(rs1.next())
+                        {
+                            System.out.println(rs1.getInt(1) +"\t" +rs1.getString(2)+"\t"+rs1.getInt(3));
+                        }
+                        19                        System.out.println(".........................................");
+                        break;
+                    case 5:
+                        ResultSet rs=st.executeQuery("select * from Stud");
+                        while(rs.next())
+                        {
+                            System.out.println(rs.getInt(1) +"\t" +rs.getString(2)+"\t"+rs.getInt(3));
+                        }
+                        System.out.println(".............................................");
+                        break;
+                    case 6:
+                        System.exit(0);
+                }
+            }
+            while(ch!=6);
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error");
+        }
+    }
+}
+3) Write a java program to display date and time of server machine on client machine.
+
+  import java.io.*;
+import java.net.*;
+class DateClient
+{
+    public static void main(String args[]) throws Exception
+    {
+        Socket soc=new Socket(InetAddress.getLocalHost(),5217);        
+        BufferedReader in=new BufferedReader(new InputStreamReader(soc.getInputStream()  ));
+        System.out.println(in.readLine());
+    }    
+}
+
+4) Write a JSP program to accept the details of Account (ANo,Type,Val) and store it into db & display it in tubular form.
+	<html>
+<body>
+<form method=get action="saveAccount.jsp">
+Enter Account No. : <input type=text name=ano><br><br>
+Enter Account Type:<input type=text name=type><br><br>
+Enter Balance : <input type=text name=bal><br><br>
+<input type=submit value="Save">
+</form>
+</body>
+</html>
+
+saveAccount.jsp
+
+<html>
+<body>
+<%@ page import="java.sql.*;" %>
+<%! int ano,bal;
+       String type;  %>
+<%
+      ano=Integer.parseInt(request.getParameter("ano"));
+      type=request.getParameter("type");
+      bal=Integer.parseInt(request.getParameter("bal"));
+      try{
+            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+            Connection cn=DriverManager.getConnection("jdbc:odbc:acnt","","");
+            PreparedStatement s=cn.prepareStatement("insert into Account values(?,?,?)");
+            s.setInt(1,ano);
+            s.setString(2,type);
+            s.setInt(3,bal);
+            s.executeUpdate();
+            out.println("Record is saved");
+            Statement st=cn.createStatement();
+            ResultSet rs=st.executeQuery("select * from Account");
+%>
+<table border="1" width="40%">
+<%      while(rs.next())
+            {
+%>
+<tr> <td><%= rs.getInt("ano") %></td>
+            <td><%= rs.getString("type") %></td>
+            <td><%= rs.getInt("bal") %></td>
+</tr>
+<%
+            }
+            cn.close();
+          }catch(Exception e)
+            {      
+                   out.println(e);      
+            }
+%>
+</body>
+</html>
+
+5) Write a JDBC program to delete the details of given employee(Eno, EName, Salary). Accept employee ID through command line.
+		
+	importjava.sql.*;
+class Slip27_1
+{
+public static void main(String a[])
+{
+Connection con;
+PreparedStatementps;
+ResultSetrs;
+try
+{
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+con=DriverManager.getConnection("jdbc:odbc:dsn");
+if(con==null)
+{
+System.out.println("Connection Failed....");
+System.exit(1);
+}
+System.out.println("Connection Established...");
+ps=con.prepareStatement("select * from employee where eid=?");
+int id = Integer.parseInt(a[0]);
+ps.setInt(1,id);
+
+rs=ps.executeQuery();
+System.out.println("eno\t"+"ename\t"+"department\t"+"sal"); while(rs.next())
+{
+System.out.println("\n"+rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.ge tInt(4));
+}
+con.close();
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+
+
+6) Write a java program in multithreading using applet for drawing temple.
+
+7) Write a java program to accept a string from user and display each vowel from a string after 3 seconds.
+
+8) Write a java program to check whether givern files is present on server or not, if it is there then display its contents
+on client's terminal otherwise display message "File Not Found".
+
+9) Write a JSP program to check whether given number is perfect or not.(Use Include directive).
+
+	<!DOCTYPE html>
+<html>
+<head>
+<title><</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<form action="Slip28.jsp" method="post">
+Enter Number :
+<input type="text" name="num">
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+JSP FILE:
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+intnum = Integer.parseInt(request.getParameter("num"));
+int n = num;
+intrem,no = 0;
+while(n!=0)
+{
+rem = n%10;
+no = no+rem*rem*rem;
+n = n/10;
+}
+if(no == num)
+{
+out.println("\nArmstrong Number");
+}
+else
+{
+out.println("Not Armstrong");
+}
+%>
+
+
+
+10) Write a java program in multithreading using applet for drawing flag.
+
+--applet file---
+import java.awt.*;
+import java.applet.*;
+public class India_Flag extends Applet
+{
+public void paint(Graphics g)
+{
+g.setColor(Color.blue);
+g.fillRect(50,20,5,300);
+g.setColor(Color.black);
+g.drawRect(50,18,3,300);
+g.setColor(Color.orange);
+g.fillRect(55,20,120,30);
+g.setColor(Color.black);
+g.drawRect(55,20,118,28);
+g.setColor(Color.green);
+g.fillRect(55,80,119,30);
+g.setColor(Color.black);
+g.drawRect(55,80,117,28);
+g.setColor(Color.black);
+g.drawOval(100,50,30,30);
+}
+}
+--index.html--
+<html>
+   <head>
+   </head>
+   <body>
+         <applet code = "India_Flag.class" width = "320" height = "480"></applet>
+   </body>
+</html>
+
+
+11) Write a java program to count the number of records in a table.
+
+	import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class Count_Example {
+   public static void main(String args[]) throws Exception {
+      //Registering the Driver
+      DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+      //Getting the connection
+      String mysqlUrl = "jdbc:mysql://localhost/mydatabase";
+      Connection con = DriverManager.getConnection(mysqlUrl, "root", "password");
+      System.out.println("Connection established......");
+      //Creating the Statement object
+      Statement stmt = con.createStatement();
+      //Query to get the number of rows in a table
+      String query = "select count(*) from Cricketers_Data";
+      //Executing the query
+      ResultSet rs = stmt.executeQuery(query);
+      //Retrieving the result
+      rs.next();
+      int count = rs.getInt(1);
+      System.out.println("Number of records in the cricketers_data table: "+count);
+   }
+}
+
+12) Write a java program to delete details of students whose intial character of their name is S.
+	import java.sql.*;
+public class Employee
+{
+    public static void main(String arg[])
+    {
+        try        {
+            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+            Connection con=DriverManager.getConnection("jdbc:odbc:BCA");
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery("Select * from Employee");
+            System.out.println(" EID "+" Ename "+" Address "+" Salary ");
+            while(rs.next())
+            {
+                System.out.print(rs.getInt(1)+"\t");
+                System.out.print(rs.getString(2)+"\t");
+                System.out.print(rs.getString(3)+"\t");
+                System.out.print(rs.getInt(4)+"\t");
+                System.out.print("\n");
+            }
+            String s="delete from Employee where Ename like 'A%'";
+            int n=stmt.executeUpdate(s);
+            if(n>0)
+            {
+                System.out.println("Record is Deleted...!!!");
+            }
+            else            {
+                System.out.println("Record is not found in table...!!!");
+            }
+            ResultSet rs1=stmt.executeQuery("Select * from Employee");
+            System.out.println(" EID "+" Ename "+" Address "+" Salary ");
+            while(rs1.next())
+            {
+                5                System.out.print(rs1.getInt(1)+"\t");
+                System.out.print(rs1.getString(2)+"\t");
+                System.out.print(rs1.getString(3)+"\t");
+                System.out.print(rs1.getInt(4)+"\t");
+                System.out.print("\n");
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
+13) Write a java program to display name of currently executing thread in multithreading.
+
+      class TestMultiNaming1 extends Thread{  
+  public void run(){  
+   System.out.println("running...");  
+  }  
+ public static void main(String args[]){  
+  TestMultiNaming1 t1=new TestMultiNaming1();  
+  TestMultiNaming1 t2=new TestMultiNaming1();  
+  System.out.println("Name of t1:"+t1.getName());  
+  System.out.println("Name of t2:"+t2.getName());  
+   
+  t1.start();  
+  t2.start();  
+  
+  t1.setName("Sonoo Jaiswal");  
+  System.out.println("After changing name of t1:"+t1.getName());  
+ }  
+}  
+
+14) Write a JSP program to display the details of college(collegeID, Coll_Name,Address) in tubular form on browser.
+	<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<body>
+<%@ page import="java.sql.*;" %>
+<%! inthno;
+String hname,address; %>
+<%
+try{
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+
+Connection cn=DriverManager.getConnection("jdbc:odbc:hospital_data","","");
+Statement st=cn.createStatement();
+ResultSetrs=st.executeQuery("select * from Hospital");
+%>
+<table border="1" width="40%"> <tr> <td>Hospital No</td> <td>Name</td> <td>Address</td> </tr> <% while(rs.next()) { %> <tr><td><%= rs.getInt("hno") %></td> <td><%= rs.getString("hname") %></td> <td><%= rs.getString("address") %> </tr> <%
+}
+cn.close();
+}catch(Exception e)
+{
+out.println(e);
+}
+%>
+</body>
+</html>
+
+

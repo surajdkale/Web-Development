@@ -1,0 +1,298 @@
+1)Create a Form with Textfield and button to increment the value after clicking to button.      _____DONE
+ANS ____________________________________________________
+Public Class Form1
+    Dim s As Integer
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        s = s + 1
+            Number.Text = s
+
+    End Sub
+End Class
+
+
+________________________________________________________
+2)Create a form to make database connectivity with VB.net. 
+ANS ____________________________________________________
+
+________________________________________________________
+3)Write a program in C# .net to create a function for the sum of two numbers. _____DONE
+ANS ____________________________________________________
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 5;
+            int y = 6;
+            int sum = x + y;
+            Console.WriteLine(sum); // Print the sum of x + y
+        }
+    }
+}
+________________________________________________________
+
+4)Design a VB.net form to pick a date from DateTimePicker Control and Display day, month,year 
+in seperate text boxes. _____DONE
+ANS ____________________________________________________
+
+Public Class Form1
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        Label1.Text = DateTimePicker1.Value.Day
+        Label2.Text = DateTimePicker1.Value.Month
+        Label3.Text = DateTimePicker1.Value.Year
+    End Sub
+End Class
+________________________________________________________
+5)Write a VB.net program to accept a character from a keyboard and check whether it
+ is vowel or consonant, also display the case of that character.    _____DONE
+ANS ____________________________________________________
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim c As Char
+        c = TextBox1.Text
+
+        Select Case c
+            Case "a"
+                MessageBox.Show(c + "containes Vowels Like A")
+            Case "e"
+                MessageBox.Show(c + "Contains Vowels Like E")
+            Case "i"
+                MessageBox.Show(c + "Contains Vowels like I")
+            Case "o"
+                MessageBox.Show(c + "Contains Vowels Like O")
+            Case "u"
+                MessageBox.Show(c + "Contains Vowels Like U")
+
+        End Select
+    End Sub
+End Class
+
+________________________________________________________
+6)Design a web application form in ASP.Net having loan amount, interest rate and duration fields.
+calculate the simple interest and perform necessary validation i.e. Ensures data has been entered 
+for each field. checking for non-numeric value. Assume suitable web-form  controls and perform 
+neccessary validation.
+ANS ____________________________________________________
+
+________________________________________________________
+7)Write a C#.Net program for multiplication of metrices.  ____DONE
+ANS ____________________________________________________
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace matrix_multiplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, m, n;
+            Console.WriteLine("Enter the Number of Rows and Columns : ");
+            m = Convert.ToInt32(Console.ReadLine());
+            n = Convert.ToInt32(Console.ReadLine());
+            int[,] a = new int[m, n];
+            Console.WriteLine("Enter the First Matrix");
+            for (i = 0; i < m; i++)
+            {
+                for (j = 0; j < n; j++)
+                {
+                    a[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("First matrix is:");
+            for (i = 0; i < m; i++)
+            {
+                for (j = 0; j < n; j++)
+                {
+                    Console.Write(a[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            int[,] b = new int[m, n];
+            Console.WriteLine("Enter the Second Matrix");
+            for (i = 0; i < m; i++)
+            {
+                for (j = 0; j < n; j++)
+                {
+                    b[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Second Matrix is :");
+            for (i = 0; i < 2; i++)
+            {
+                for (j = 0; j < 2; j++)
+                {
+                    Console.Write(b[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Matrix Multiplication is :");
+            int[,] c = new int[m, n];
+            for (i = 0; i < m; i++)
+            {
+                for (j = 0; j < n; j++)
+                {
+                    c[i, j] = 0;
+                    for (int k = 0; k < 2; k++)
+                    {
+                        c[i, j] += a[i, k] * b[k, j];
+                    }
+                }
+            }
+            for (i = 0; i < m; i++)
+            {
+                for (j = 0; j < n; j++)
+                {
+                    Console.Write(c[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+________________________________________________________
+8)Write a Menu Driven program in C#.Net to perform following functionality: 
+    Addition,Multiplication,Substraction,Division.___DONE
+ANS ____________________________________________________
+using System;
+public class Exercise25
+{
+    public static void Main()
+    {
+        int num1, num2, opt;
+
+        Console.Write("\n\n");
+        Console.Write("A menu driven program for a simple calculator:\n");
+        Console.Write("------------------------------------------------");
+        Console.Write("\n\n");
+
+
+        Console.Write("Enter the first Integer :");
+        num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the second Integer :");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+
+        Console.Write("\nHere are the options :\n");
+        Console.Write("1-Addition.\n2-Substraction.\n3-Multiplication.\n4-Division.\n5-Exit.\n");
+        Console.Write("\nInput your choice :");
+        opt = Convert.ToInt32(Console.ReadLine());
+
+        switch (opt)
+        {
+            case 1:
+                Console.Write("The Addition of  {0} and {1} is: {2}\n", num1, num2, num1 + num2);
+                break;
+
+            case 2:
+                Console.Write("The Substraction of {0}  and {1} is: {2}\n", num1, num2, num1 - num2);
+                break;
+
+            case 3:
+                Console.Write("The Multiplication of {0}  and {1} is: {2}\n", num1, num2, num1 * num2);
+                break;
+
+            case 4:
+                if (num2 == 0)
+                {
+                    Console.Write("The second integer is zero. Devide by zero.\n");
+                }
+                else
+                {
+                    Console.Write("The Division of {0}  and {1} is : {2}\n", num1, num2, num1 / num2);
+                }
+                break;
+
+            case 5:
+                break;
+
+            default:
+                Console.Write("Input correct option\n");
+                break;
+        }
+    }
+}________________________________________________________
+9)Write a program that demonstrates the use of primitive data types in C#. The program should 
+also support the type conversion
+  -Interger to String
+  -String to Integer               ______DONE
+ANS ____________________________________________________
+using System;
+class MyApplication
+{
+    static void Main(string[] args)
+    {
+        String s;
+        int num = 299;
+        s = num.ToString();
+        Console.WriteLine("String = " + s);
+        Console.ReadLine();
+    }
+}
+
+________________________________________________________
+10) Write a program for blinking IMage. ____DONE
+ANS ____________________________________________________
+Public Class Form1
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If PictureBox1.Visible = True Then
+            PictureBox1.Visible = False
+        Else
+            PictureBox1.Visible = True
+        End If
+    End Sub
+End Class
+________________________________________________________
+11) Write a VB.Net program to accept a number from user through input box and display its 
+multiplication table into the list box.____DONE
+ANS ____________________________________________________
+
+______Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim n, result, m As Integer
+
+        Dim s As String
+
+        m = TextBox2.Text
+        Me.TextBox1.Text = ""
+
+        For n = 1 To 10
+            s = m & "X" & n & "="
+            result = m * n
+            Me.TextBox1.Text = TextBox1.Text & s & result & vbCrLf
+
+
+        Next
+    End Sub
+End Class
+__________________________________________________
+12) Write a VB.Net program to check whether enter string  is palindrome or not.___DONE
+ANS ____________________________________________________
+Public Class Form1
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim s As String
+        Dim k As String
+        s = UserInput.Text
+        k = StrReverse(s)
+        If s = k Then
+            MessageBox.Show(s + " is PANLINDROME!!")
+        Else
+            MessageBox.Show(s + " is NOT PALINDROME!!")
+        End If
+    End Sub
+End Class
+
+________________________________________________________
+  

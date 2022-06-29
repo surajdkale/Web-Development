@@ -1,0 +1,373 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.bgimage{
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100vh;
+	background-attachment: fixed;
+}
+html{
+	scroll-behavior: smooth;
+}
+.menu{
+	left: 0;
+	top:0;
+	height: 90px;
+	width: 100%;
+	background-color:rgba(0,0,0,0.6);
+}
+
+.leftmenu{
+	width: 40%;
+	line-height: 70px;
+	float: left;
+}
+a{
+	text-decoration: none;
+	color: white;	
+}
+a:hover{
+	 text-decoration: none;
+	 color: orange;
+
+}
+.leftmenu h5{
+	margin-left : 30px;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	font-family:  'Arvo', serif;
+}
+.rightmenu{
+		 	width: 70%;
+		 	height: 100px;
+		 	float: right;
+		 
+}
+
+.rightmenu ul
+{
+	margin-left: 200px;
+	list-style-type: none;
+}
+.rightmenu ul li{
+	font-family: 'Arvo', serif;
+	text-decoration: none;
+font-family: 'Questrial', sans-serif;
+	 display: inline-block;
+	 list-style: none;
+	 font-size: 15px;
+	 
+	 color: white;
+	 font-weight: bold;
+	 line-height: 70px;
+	 margin-left: 40px;
+	 text-transform: uppercase;
+}
+
+#firstlist{
+	color: orange;
+}
+.rightmenu ul li:hover{
+
+	color: orange;
+}
+.principle-desk-card{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+	width: 250px;
+	box-sizing: border-box;
+	background-color: transparent;
+	margin-left: 25%;
+	margin-top: 100px;
+	box-shadow: 0px 18px 30px white;
+ }
+ .principle-desk-card >img {
+ 	 display: block;
+ 	 max-width: 100%;
+ 	 height: auto;
+ 	 margin-bottom: 10px;
+ 	 margin-left: 10px;
+ 	}
+ 
+ button{
+ 	font-family: sans-serif;
+ 	border: none;
+ 	margin-bottom: 10px;
+ 	padding: 15px 30px;
+ 	font-size: 14px;
+ 	outline: none;
+ 	margin-left: 30px;
+ 	-webkit-transition-duration: 1s;
+ 	transition-duration: 1s;
+ }
+
+ #principal-button{
+ 	font-family: sans-serif;
+ 	padding-top: 15px;
+ 	background-color: yellow;
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+ 	letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+ 
+ }
+ #principal-button:hover{
+ 	background-color: rgb(23,52,89);
+ 	color: white;
+
+
+ }
+ .Annoucements-card{
+ 	box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+	width: 250px;
+	box-sizing: border-box;
+	height: 280px;
+	background-color: transparent;
+	margin-left: 46%;
+	color: white;
+	margin-top: -280px;
+	box-shadow: 0px 18px 30px white;
+		font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+
+ }
+
+ .h3 h3{
+ 	  color: white;
+ 	  font-weight: bold;
+ 	  text-align: center;
+
+ }
+.News-Events-Card{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+	width: 250px;
+	box-sizing: border-box;
+	height: 280px;
+	background-color: transparent;
+	margin-left: 67%;
+	color: white;
+	margin-top: -280px;
+	box-shadow: 0px 18px 30px white;
+		font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+
+}
+.event-1{
+	
+}
+.event-2{
+	width: 100%;
+	height: 30px;
+	font-weight: bold;
+	background-color: transparent;
+	color: white;
+		font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+
+}
+.News-Events-Card h3{
+	color: white;
+ 	  font-weight: bold;
+ 	  	font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+ 	  text-align: center;
+
+}
+.middle-paragraph{
+		
+		padding-top: 80px;
+		height: 100px;
+		width: 400px;
+		padding-left: 10px;
+		line-height: 20px;
+}
+.middle-paragraph h1{
+	text-align: center;
+	 color: white;
+	 padding-bottom: 30px;
+	 letter-spacing: 1px;
+	 	font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+}
+.middle-paragraph p{
+	color: white;
+	line-height: 23px;
+	padding-bottom: 20px;
+		font-family: 'Arvo', serif;
+font-family: 'Questrial', sans-serif;
+font-size: 20px;
+}
+
+.half-image img{
+	
+	 width: 60%;
+	 margin-left: 35%;
+	 margin-top: -100px;
+	 height: 600px;
+
+}
+
+#ndimgp{
+		font-weight: bold;
+		font-size: 50px;
+		letter-spacing: 2px;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color:  #e6e6e6;
+		padding-top: 40px;
+}
+.secondimage{
+			background-image: url("IMG/blurr.jpg");
+	        background-size: 100% 100%;
+	        width: 100%;
+	        height: 60vh;
+	        background-attachment: fixed;
+            }
+
+
+
+.onlineplatformsforstudents p{
+
+	color: 	 #e6e6e6;
+	padding-top: 20px;
+	font-family: 'Play', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+.img1moodle img{
+	 margin-top: 100px;
+	 margin-left: 15%;
+	 height: 150px;
+	 width: 400px;
+	 box-shadow: 1px 10px 15px 0px  #e6e6e6;
+}
+.img2moodle img{
+		margin-top: -150px;
+	 margin-left: 50%;
+	 height: 150px;
+
+	 width: 400px;
+	 box-shadow: 1px 10px 15px 0px  #e6e6e6;
+}
+
+footer{
+	background-color:  #003366;
+	height: auto;
+	width: 100%;
+}
+.singlecol{
+	color: white;
+	margin-left: 40px;
+	line-height: 40px;
+	font-family: 'Prompt', sans-serif;
+
+}
+.singlecol p{
+	 margin-left: 40px;
+	 margin-top: -30px;
+}
+.singlecol h5{
+	font-family: 'Prompt', sans-serif;
+	font-weight: 100;
+}
+#icons img{
+	padding-top: 10px;
+	height: 20px;
+	width: 20px;
+
+}
+.doublecol{
+	color: white;
+	margin-left: 50%;
+	line-height: 40px;
+	margin-top: -240px;
+	font-family: 'Prompt', sans-serif;
+}
+.doublecol ul{
+	list-style-type: none;
+	font-weight: 100;
+}
+.doublecol ul li h3{
+	 font-weight: 100;
+}
+.foot h4{
+	color: white;
+	text-align: center;
+		font-weight: 100;
+	letter-spacing: 1px;
+font-family: 'Prompt', sans-serif;
+}
+h4{
+	width: 80%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#principal-button a{
+	color: #03103d;
+}
+#principal-button a:hover{
+	color: white;
+}
+.singlecol h3{
+	font-weight: 100;
+}
+/* Top main means upper blue slide realted...*/
+.top-main {
+	background-color: #052d52;
+	height: 48px;
+	width: 100%;
+	position: static;
+}
+.tele {
+	float: left;
+	margin-left: 100px;
+	background-color: transparent;
+
+}
+.tele img{
+	 height: 20px;
+	 width: 20px; 
+	 padding-top: 15px;
+	
+}
+.tele p{
+	margin-left: -95px;
+	 color: white;
+	 	padding-top: 15px;
+	 font-family: 'Arvo', serif;
+	text-decoration: none;
+	font-size: 16px;
+font-family: 'Questrial', sans-serif;
+
+}
+
+.tele p:hover{
+	 color: orange;
+
+}
+.top-main table tr td{
+	text-align: left;
+}
+.top-main button{
+	 margin-left: 1150px;
+	 background-color: orange;
+	 margin-top: -44px;
+	 font-size: 17px;
+	 border:none;
+	 transition-duration: 1s;
+	 -webkit-transition-duration:1s;
+}
+.top-main button:hover{
+		color: white;
+		transition-duration: 1s;
+		background-color: #052d52;
+		border:1px solid orange;
+}
+.top-img{
+	 	  
+}
